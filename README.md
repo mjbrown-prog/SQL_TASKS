@@ -61,11 +61,13 @@ From the Above, the uploaded file,
 )
 SELECT TOP 5 city
 FROM CityCounts
-ORDER BY EmployeeCount ASC;` then went ahead to now filter to get the cities with more than 15 employees by using ` SELECT COUNT(*) AS TOTAL_EMPLOYEE FROM Employee
+ORDER BY EmployeeCount ASC;` then went ahead to filter to get the cities with more than 15 employees by using ` SELECT COUNT(*) AS TOTAL_EMPLOYEE FROM Employee
 
 SELECT CITY, COUNT(*) AS TOTAL_EMPLOYEE FROM EMPLOYEE
 GROUP BY city
-HAVING COUNT(*) > 15;`. Please note to name the couln which you want to filter i had to use count as the the name which i want from employee.
+HAVING COUNT(*) > 15;`. 
+
+Please note to name the column which you want to filter we had to use count and the the name which i want from employee.
 
 - to find out the most used pin code we used `SELECT TOP 1 pincode,COUNT(*) AS MOST_USED FROM
  Employee GROUP BY pincode HAVING COUNT(*) >30;` why greater than 30 was used because from the salary table it was noticed that the top 5 most used Pincode  is  between 6-44. to stream line to most used i used top 1 and used the no above 30.
