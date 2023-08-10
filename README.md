@@ -28,11 +28,11 @@ We are going to be looking at how to craete a database in SQL, create tables in 
 
 From the above, Database named Student_Records was created using `CREATE DATABASE`. Then created table using `CREATE TABLE`.
 
-Note while craeting the tables the information has to be set by adding Primary Key Identity for Student ID which performs an auto-increment, then sey the name Column in `VARCHAR(50)` not null, then the Age `INT`, the Gender `VARCHAR(10)`, the Sublect `VARCHAR(50)`, the Bloodgroup `VARCHAR(3)`, the Weight `DECIMAL(5,2)`, the Height `DECIMAL(5,2)`, the Score `INT DEFAULT '0'`, the Grade ` INT`.
+Note while creating the tables the information has to be set by adding Primary Key Identity for Student ID which performs an auto-increment, then sey the name Column in `VARCHAR(50)` not null, then the Age `INT`, the Gender `VARCHAR(10)`, the Sublect `VARCHAR(50)`, the Bloodgroup `VARCHAR(3)`, the Weight `DECIMAL(5,2)`, the Height `DECIMAL(5,2)`, the Score `INT DEFAULT '0'`, the Grade ` INT`.
 
 For Inserting the informations in the table i used `INSERT INTO`. 
 
-To change the column braeing the Suject to Course i used `EXEC sp_rename` where the table name . the old name and the new name.
+To change the column bearing the Suject to Course i used `EXEC sp_rename` where the table name . the old name and the new name.
 
 To drop the Age column firstly you have to `ALTER TABLE` then go ahead to `DROP COLUMN` the the column name Age.
 
@@ -67,10 +67,10 @@ SELECT CITY, COUNT(*) AS TOTAL_EMPLOYEE FROM EMPLOYEE
 GROUP BY city
 HAVING COUNT(*) > 15;`. 
 
-Please note to name the column which you want to filter we had to use count and the the name which i want from employee.
+Please note that to name the column which you want to filter we had to use count and the the name which i want from employee.
 
 - to find out the most used pin code we used `SELECT TOP 1 pincode,COUNT(*) AS MOST_USED FROM
- Employee GROUP BY pincode HAVING COUNT(*) >30;` why greater than 30 was used because from the salary table it was noticed that the top 5 most used Pincode  is  between 6-44. to stream line to most used i used top 1 and used the no above 30.
+ Employee GROUP BY pincode HAVING COUNT(*) >30;` why greater than 30 was used because from the salary table it was noticed that the top 5 most used Pincode  is  between 6-44. to stream line to most used i used top 1 and used the numbers above 30.
 
 ---
 
